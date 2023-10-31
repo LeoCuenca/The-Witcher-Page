@@ -7,7 +7,7 @@
 body{
     background-image: 
     linear-gradient(rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 1)),
-    url("../img/background.jpg");
+    url("../background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -147,6 +147,16 @@ ul{
     flex-basis: 100%;
 }
 
+.img-grid{
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.img-grid:hover{
+    transition: all .7s;
+    filter: opacity(.7);
+}
+
 /* ----- ESTILOS DEL MAIN ----- */
 
 .main{
@@ -166,6 +176,16 @@ ul{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.galeria-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+    background:linear-gradient(to bottom, #8f8f8f 0%,#cacaca 50%,#8f8f8f 100%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    justify-content: space-evenly;
+    padding: 1em 0;
+    width: 100%;
+}
+
 .noshadow{
     box-shadow: none;
 }
@@ -178,24 +198,18 @@ ul{
     padding: 20px;
     font-size: 1.6rem;
     text-align: center;
+}
 
+.galeria-grid a{
+    width: 300px;
 }
 
 .titulo-grid{
-    grid-column-start: 1 ;
-    grid-column-end: 5;
+    width: 100%;
 }
 
 .padbot{
     padding-bottom: 1em;
-}
-
-.galeria-grid{
-    display: grid;
-    background:linear-gradient(to bottom, #8f8f8f 0%,#cacaca 50%,#8f8f8f 100%);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    grid-gap: 1em;
-    padding: 0 1em 1em;
 }
 
 .section-container{
