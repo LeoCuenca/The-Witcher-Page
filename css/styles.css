@@ -176,8 +176,6 @@ ul{
     filter: opacity(.7);
 }
 
-/* ----- ESTILOS DEL MAIN ----- */
-
 .main{
     display: flex;
     flex-direction: column;
@@ -243,6 +241,10 @@ ul{
     padding: 0 1em 1em 1em;
     background:linear-gradient(to bottom, #8f8f8f 0%,#cacaca 50%,#8f8f8f 100%);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.spoiler{
+    color: darkred;
 }
 
 .trailer{
@@ -335,7 +337,6 @@ ul{
     background:  #2a251e;
     margin: 0;
     padding: .3em;
-    border-top: #807a45 solid 1px;
     width: 100%;
 }
 
@@ -444,6 +445,10 @@ ul{
 
 textarea{
     resize: none;
+}
+
+.galeria-grid{
+    column-gap: .3em;
 }
 
 .contact-wrapper{
@@ -754,7 +759,23 @@ textarea{
 
 }
 
+@media screen and (max-width: 1000px){
+    .galeria-grid{
+        grid-template-columns: repeat(auto-fill, minmax(150px, auto));
+        row-gap: .5em;
+    }
+
+    .img-grid, .galeria-grid a{
+        height: 150px;
+        width: 150px;
+    }
+}
+
 @media screen and (max-width: 800px) {
+
+    body{
+        background-image: url("../img/background-movil.jpg");
+    }
 
     .main-container{
         display: grid;
@@ -931,15 +952,15 @@ textarea{
 @media screen and (max-width: 550px) {
 
     .main-container{
-        grid-template-columns: .1fr 2fr .1fr;
+        grid-template-columns: .1fr 4fr .1fr;
         min-width: 390px;
     }
 
     .btnLogin{
         border: none;
-   }
+    }
 
-   .article-container{
+    .article-container{
         width: 100%;
     }
 
@@ -983,10 +1004,6 @@ textarea{
         display: none;
     }
 
-    .porque{
-        height: 8em;
-    }
-
     .iframe{
         padding-top: 1em;
         width: 100%;
@@ -1015,10 +1032,18 @@ textarea{
         font-size: 1.5rem;
     }
 
-    .copyright h4{
-        display: inherit;
-        align-items: center;
-        height: 50%;
+    .copyright{
+        display: block;
+    }
+
+    .porque{
+        height: fit-content;
+    }
+
+    .contact-content{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        padding: 0;
     }
 
 }
