@@ -120,6 +120,37 @@ body{
      width:100%;
 }
 
+.menu-desplegable{
+    position: absolute;
+    list-style: none;
+    width: 175px;
+    background: #a59363;
+    padding: 0;
+    display: none;
+
+}
+
+.list li:hover .menu-desplegable{
+    display: block;
+}
+
+.menu-desplegable li:hover{
+    background: #15181f;
+    transition:1.3s;
+}
+
+.menu-desplegable li a{
+    display: block;
+    color: white;
+    padding: 15px 0px 15px 25px;
+    font-weight: 600;
+}
+
+.menu-desplegable li a:hover{
+    color: #a59363;
+    transition: all .5s;
+}
+
 .btnLogin{
     display: flex;
     justify-content: center;
@@ -437,7 +468,9 @@ ul{
     text-align: center;
     padding: 1em;
     margin: 0;
-    backdrop-filter: blur(20px);
+    color: whitesmoke;
+    font-family: sans-serif;
+    backdrop-filter: blur(50px);
     border-right: 2px solid #15181f;
     border-left: 2px solid #15181f;
     border-top: 2px solid #15181f;
@@ -717,6 +750,15 @@ textarea{
         width: 100%;
     }
 
+    .contact-content{
+        padding: 0;
+    }
+
+    form input:nth-child(n-1){
+        min-width: 250px;
+        font-size: .8em;
+    }
+
     .section-text{
         font-size: 1.3rem;
     }
@@ -760,6 +802,16 @@ textarea{
 }
 
 @media screen and (max-width: 1000px){
+
+    .contact-content{
+        padding: 0;
+    }
+
+    form input:nth-child(n-1){
+        min-width: 0;
+        font-size: .8em;
+    }
+
     .galeria-grid{
         grid-template-columns: repeat(auto-fill, minmax(150px, auto));
         row-gap: .5em;
