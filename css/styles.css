@@ -96,6 +96,7 @@ body{
     padding: 5px 0;
     position: relative;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0.3s ease-in-out;
 }
@@ -1001,7 +1002,7 @@ textarea{
 
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 576px) {
 
     .main-container{
         grid-template-columns: .1fr 4fr .1fr;
@@ -1062,7 +1063,7 @@ textarea{
         margin: auto;
         height: 100%;
         padding-bottom: 1em;
-        min-height: 250px;
+        min-height: 350px;
         min-width: 0;
     }
 
